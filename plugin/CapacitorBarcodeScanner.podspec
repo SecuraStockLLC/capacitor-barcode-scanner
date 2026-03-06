@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.source_files = 'ios/Sources/**/*.{swift,h,m,c,cc,mm,cpp}'
   s.ios.deployment_target  = '15.0'
   s.dependency 'Capacitor'
-  s.dependency 'OSBarcodeLib', '2.0.1'
+  # s.dependency 'OSBarcodeLib', '2.0.1'
+  # For local development, the app's Podfile should include the local path
   s.swift_version = '5.1'
 end

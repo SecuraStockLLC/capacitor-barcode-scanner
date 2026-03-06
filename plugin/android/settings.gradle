@@ -1,2 +1,8 @@
 include ':capacitor-android'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
+
+// For local development, uncomment these lines:
+// include ':OSBarcodeLib'
+// project(':OSBarcodeLib').projectDir = new File('../../../OSBarcodeLib-Android')
+
+// For production, the OSBarcodeLib is fetched via the published AAR or included as a git submodule

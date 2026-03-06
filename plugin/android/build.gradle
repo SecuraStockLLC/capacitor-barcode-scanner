@@ -56,10 +56,15 @@ kotlin {
 repositories {
     google()
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation "io.ionic.libs:ionbarcode-android:2.0.1@aar"
+    // Use JitPack to fetch OSBarcodeLib-Android from GitHub
+    // Format: com.github.{owner}:{repo}:{branch}-SNAPSHOT
+    implementation 'com.github.SecuraStockLLC:OSBarcodeLib-Android:securastock-SNAPSHOT'
+    // For local development, comment above and uncomment:
+    // implementation project(':OSBarcodeLib')
     implementation project(':capacitor-android')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation 'androidx.activity:activity-ktx:1.11.0'

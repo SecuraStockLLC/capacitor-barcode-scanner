@@ -75,6 +75,42 @@ export type CapacitorBarcodeScannerOptions = {
     showCameraSelection?: boolean;
     scannerFPS?: number;
   };
+
+  /**
+   * Enable visual highlight on detected barcode
+   * @default true
+   */
+  highlightEnabled?: boolean;
+
+  /**
+   * Hex color for barcode highlight (e.g., "#00FF00")
+   * @default "#00FF00"
+   */
+  highlightColor?: string;
+
+  /**
+   * Stroke width for highlight rectangle
+   * @default 4
+   */
+  highlightStrokeWidth?: number;
+
+  /**
+   * Delay in milliseconds before closing scanner after successful scan
+   * @default 500
+   */
+  closeDelay?: number;
+
+  /**
+   * Enable vibration/haptic feedback on successful scan
+   * @default true
+   */
+  vibrationEnabled?: boolean;
+
+  /**
+   * Vibration duration in milliseconds (Android only)
+   * @default 100
+   */
+  vibrationDuration?: number;
 };
 
 /**

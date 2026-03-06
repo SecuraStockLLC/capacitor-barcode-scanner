@@ -47,7 +47,13 @@ class CapacitorBarcodeScannerPlugin : Plugin() {
                 scanButton = scanButton,
                 scanText = scanText,
                 hint = hint,
-                androidScanningLibrary = androidScanningLibrary
+                androidScanningLibrary = androidScanningLibrary,
+                highlightEnabled = call.getBoolean("highlightEnabled", true) ?: true,
+                highlightColor = call.getString("highlightColor", "#00FF00") ?: "#00FF00",
+                highlightStrokeWidth = call.getFloat("highlightStrokeWidth", 4f) ?: 4f,
+                closeDelay = (call.getInt("closeDelay", 500) ?: 500).toLong(),
+                vibrationEnabled = call.getBoolean("vibrationEnabled", true) ?: true,
+                vibrationDuration = (call.getInt("vibrationDuration", 100) ?: 100).toLong()
         )
 
         val scanIntent = Intent(activity, OSBARCScannerActivity::class.java)
