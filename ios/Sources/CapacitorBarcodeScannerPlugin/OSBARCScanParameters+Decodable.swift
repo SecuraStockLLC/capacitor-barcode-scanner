@@ -16,6 +16,7 @@ extension OSBARCScanParameters: Decodable {
         case highlightStrokeWidth
         case closeDelay
         case vibrationEnabled
+        case scanLineEnabled
     }
 
     public init(from decoder: Decoder) throws {
@@ -44,6 +45,7 @@ extension OSBARCScanParameters: Decodable {
         let closeDelayMs = try container.decodeIfPresent(Double.self, forKey: .closeDelay) ?? 500
         let closeDelay = closeDelayMs / 1000.0  // Convert ms to seconds
         let vibrationEnabled = try container.decodeIfPresent(Bool.self, forKey: .vibrationEnabled) ?? true
+        let scanLineEnabled = try container.decodeIfPresent(Bool.self, forKey: .scanLineEnabled) ?? true
 
         self.init(
             scanInstructions: scanInstructions,
@@ -55,7 +57,8 @@ extension OSBARCScanParameters: Decodable {
             highlightColor: highlightColor,
             highlightStrokeWidth: highlightStrokeWidth,
             closeDelay: closeDelay,
-            vibrationEnabled: vibrationEnabled
+            vibrationEnabled: vibrationEnabled,
+            scanLineEnabled: scanLineEnabled
         )
     }
 }

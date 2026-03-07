@@ -53,7 +53,8 @@ class CapacitorBarcodeScannerPlugin : Plugin() {
                 highlightStrokeWidth = call.getFloat("highlightStrokeWidth", 4f) ?: 4f,
                 closeDelay = (call.getInt("closeDelay", 500) ?: 500).toLong(),
                 vibrationEnabled = call.getBoolean("vibrationEnabled", true) ?: true,
-                vibrationDuration = (call.getInt("vibrationDuration", 100) ?: 100).toLong()
+                vibrationDuration = (call.getInt("vibrationDuration", 100) ?: 100).toLong(),
+                scanLineEnabled = call.getBoolean("scanLineEnabled", true) ?: true
         )
 
         val scanIntent = Intent(activity, OSBARCScannerActivity::class.java)

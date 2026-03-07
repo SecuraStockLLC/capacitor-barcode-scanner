@@ -111,6 +111,13 @@ export type CapacitorBarcodeScannerOptions = {
    * @default 100
    */
   vibrationDuration?: number;
+
+  /**
+   * Enable center-line-only scanning (red line mode).
+   * When enabled, only barcodes crossing the center line are scanned.
+   * @default true
+   */
+  scanLineEnabled?: boolean;
 };
 
 /**
